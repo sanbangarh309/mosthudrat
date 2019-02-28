@@ -7,8 +7,8 @@ import auth from 'src/auth';
 
 import App from './components/App';
 import Edit_Product from './Product/Edit_Product';
-import Admin from './Admin/route';
-import Product from './Product/route';
+import Admin from './Admin';
+import Product from './Admin/Product';
 
 const Home = Loadable({
     loader: () => import('./Home/route'),
@@ -27,8 +27,8 @@ export default () => (
             {/* This can only be viewed with advanced permission */}
             <Route path="/advanced-permission" component={TestWithAdvPerm} />
             <Route path="/product/edit/:id" component={Edit_Product} />
-            <Route path="/admin" component={Admin} />
-            <Route path="/admin/products" component={Product} />
+            <Route path="/admin" key={Admin.constants.NAME} component={Admin.route} />
+            <Route path="/admin/:page" component={Product.route} />
 
             {/* Import all routes, permissions are verified in each route */}
             {features.filter((feature) => feature.route).map((feature) => (

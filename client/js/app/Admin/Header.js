@@ -15,9 +15,8 @@ const Header = () => {
     <div className="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
 <div className="sidebar-wrapper">
             <div className="logo">
-	        <a href="http://www.creative-tim.com" className="simple-text logo-normal">
-	          Creative Tim
-	        </a>
+            <NavLink exact className="simple-text logo-normal" activeClassName='active' to='/'><i class="material-icons"> Creative Tim</i>
+	      	</NavLink>
 	      </div>
 
             <ul className="nav">
@@ -27,12 +26,12 @@ const Header = () => {
                 </NavLink>
                 </li>
                 <li>
-                <NavLink exact activeClassName='active' to='/'><i class="material-icons">content_paste</i>
+                <NavLink exact activeClassName='active' to='/admin/categories'><i class="material-icons">content_paste</i>
                         <p>Categories</p>
                 </NavLink>
                 </li>
                 <li>
-                <NavLink exact activeClassName='active' to='/'><i class="material-icons">library_books</i>
+                <NavLink exact activeClassName='active' to='/admin/products'><i class="material-icons">library_books</i>
                         <p>Products</p>
                 </NavLink>
                 </li>
