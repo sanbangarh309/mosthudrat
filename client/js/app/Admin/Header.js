@@ -1,4 +1,7 @@
 import React from 'react';
+import './css/material-dashboard.css';
+import './css/font-awesome.min.css';
+import './css/demo.css';
 import './css/Header.css';
 
 import 'jquery';
@@ -12,23 +15,24 @@ const Header = () => {
     <div className="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
 <div className="sidebar-wrapper">
             <div className="logo">
-                <NavLink exact activeClassName='active' to='/'>Mostuhdrat
-                </NavLink>
-            </div>
+	        <a href="http://www.creative-tim.com" className="simple-text logo-normal">
+	          Creative Tim
+	        </a>
+	      </div>
 
             <ul className="nav">
                 <li className="active">
-                <NavLink exact activeClassName='active' to='/'><i className="pe-7s-graph"></i>
+                <NavLink exact activeClassName='active' to='/'><i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                 </NavLink>
                 </li>
                 <li>
-                <NavLink exact activeClassName='active' to='/'><i className="pe-7s-news-paper"></i>
+                <NavLink exact activeClassName='active' to='/'><i class="material-icons">content_paste</i>
                         <p>Categories</p>
                 </NavLink>
                 </li>
                 <li>
-                <NavLink exact activeClassName='active' to='/'><i className="pe-7s-note2"></i>
+                <NavLink exact activeClassName='active' to='/'><i class="material-icons">library_books</i>
                         <p>Products</p>
                 </NavLink>
                 </li>

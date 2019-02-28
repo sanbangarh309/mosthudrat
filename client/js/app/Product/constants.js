@@ -1,2 +1,2 @@
 // This will be used later in our root reducer
-export const NAME = 'product';
+export const NAME = 'products';

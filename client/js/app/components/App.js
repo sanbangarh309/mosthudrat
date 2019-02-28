@@ -22,8 +22,8 @@ const App = ({children}) => {
             <div className="main-panel">
             	<Topbar />
             	{children}
+              <AdminFooter />
             </div>
-            <AdminFooter />
         </div>
     );
   }

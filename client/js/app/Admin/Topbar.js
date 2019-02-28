@@ -9,85 +9,70 @@ var NavLink = require('react-router-dom').NavLink;
 const Topbar = () => {
 
   return (
-    <nav className="navbar navbar-default navbar-fixed">
-            <div className="container-fluid">
-                <div className="navbar-header">
-                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span className="sr-only">Toggle navigation</span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                    </button>
-                    <a className="navbar-brand" href="#">Table List</a>
+    <nav className="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div className="container-fluid">
+          <div className="navbar-wrapper">
+            <a className="navbar-brand" href="#pablo">Dashboard</a>
+          </div>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="sr-only">Toggle navigation</span>
+            <span className="navbar-toggler-icon icon-bar"></span>
+            <span className="navbar-toggler-icon icon-bar"></span>
+            <span className="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div className="collapse navbar-collapse justify-content-end">
+            <form className="navbar-form">
+              <div className="input-group no-border">
+                <input type="text" value="" className="form-control" placeholder="Search..."/>
+                <button type="submit" className="btn btn-white btn-round btn-just-icon">
+                  <i className="material-icons">search</i>
+                  <div className="ripple-container"></div>
+                </button>
+              </div>
+            </form>
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" href="#pablo">
+                  <i className="material-icons">dashboard</i>
+                  <p className="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li className="nav-item dropdown">
+                <a className="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i className="material-icons">notifications</i>
+                  <span className="notification">5</span>
+                  <p className="d-lg-none d-md-block">
+                    Some Actions
+                  </p>
+                </a>
+                <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a className="dropdown-item" href="#">Mike John responded to your email</a>
+                  <a className="dropdown-item" href="#">You have 5 new tasks</a>
+                  <a className="dropdown-item" href="#">You're now friend with Andrew</a>
+                  <a className="dropdown-item" href="#">Another Notification</a>
+                  <a className="dropdown-item" href="#">Another One</a>
                 </div>
-                <div className="collapse navbar-collapse">
-                    <ul className="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                <i className="fa fa-dashboard"></i>
-                                <p className="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li className="dropdown">
-                              <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                    <i className="fa fa-globe"></i>
-                                    <b className="caret hidden-sm hidden-xs"></b>
-                                    <span className="notification hidden-sm hidden-xs">5</span>
-                                    <p className="hidden-lg hidden-md">
-                                        5 Notifications
-                                        <b className="caret"></b>
-                                    </p>
-                              </a>
-                              <ul className="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                           <a href="">
-                                <i className="fa fa-search"></i>
-                                <p className="hidden-lg hidden-md">Search</p>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul className="nav navbar-nav navbar-right">
-                        <li>
-                           <a href="">
-                               <p>Account</p>
-                            </a>
-                        </li>
-                        <li className="dropdown">
-                              <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                    <p>
-                                        Dropdown
-                                        <b className="caret"></b>
-                                    </p>
-
-                              </a>
-                              <ul className="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li className="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Log out</p>
-                            </a>
-                        </li>
-                        <li className="separator hidden-lg hidden-md"></li>
-                    </ul>
+              </li>
+              <li className="nav-item dropdown">
+                <a className="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i className="material-icons">person</i>
+                  <p className="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a className="dropdown-item" href="#">Profile</a>
+                  <a className="dropdown-item" href="#">Settings</a>
+                  <div className="dropdown-divider"></div>
+                  <a className="dropdown-item" href="#">Log out</a>
                 </div>
-            </div>
-        </nav>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 )};
 
 export default Topbar;
